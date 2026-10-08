@@ -1,45 +1,35 @@
 Reto: ¿Árbol sano o árbol en cadena?
-Proyecto desarrollado en Java para la materia de Estructuras de Datos / Algoritmos. El objetivo principal es construir y manipular árboles binarios de búsqueda/representación, analizando las métricas clave de la estructura (nodos, hojas, altura, grados) y determinando cuándo un árbol binario se degrada en una cadena secuencial (similar a una lista enlazada).
-👥 Integrantes y Participación
-Participante
-Rol / Responsabilidades
-Porcentaje de Participación
-Esteban Manobanda
-Implementación de la lógica de construcción del Árbol A y B, desarrollo del algoritmo esCadena y pruebas de casos límite.
-50%
-Sebastián Tenorio
-Implementación de consultas de métricas, análisis de complejidad de búsqueda, pruebas de recorridos () y documentación.
-50%
+Estructuras de Datos y Algoritmos — Universidad Técnica de Ambato
+1. Descripción del Proyecto
+Proyecto desarrollado en Java para evaluar el comportamiento y métricas clave de los árboles binarios. El objetivo principal es construir y manipular estructuras arbóreas, analizando métricas como nodos, hojas, altura y grados, para determinar cuándo un árbol binario se degrada en una cadena secuencial (lista enlazada).
+2. Integrantes y Participación
+Participante	Rol / Responsabilidades	% Participación
+Esteban Manobanda	Implementación de la lógica de construcción de los Árboles A y B, desarrollo del algoritmo esCadena y pruebas de casos límite.	50%
+Sebastián Tenorio	Implementación de consultas de métricas, análisis de complejidad de búsqueda, pruebas de recorridos (I ➔ D ➔ I) y documentación.	50%
 
-📁 Estructura del Proyecto
-El código está organizado bajo la arquitectura de paquetes requerida:
+3. Estructura del Proyecto
 RetoArbolesJava/
-├── README.md
 └── src/
     ├── arboles/
     │   ├── modelo/
-    │   │   └── Nodo.java            # Clase contenedora del nodo del árbol
+    │   │   └── Nodo.java             # Clase contenedora del nodo del árbol
     │   ├── negocio/
-    │   │   └── ArbolBinario.java    # Métodos principales y métricas del árbol
+    │   │   └── ArbolBinario.java     # Métodos principales y métricas del árbol
     │   └── vista/
-    │       └── VistaArbol.java      # Utilidad para la visualización del árbol
+    │       └── VistaArbol.java       # Utilidad para la visualización gráfica
     └── reto/
-        └── MainReto.java            # Ejecución principal y respuesta al reto
-
-
-🚀 Compilación y Ejecución
-Para compilar y ejecutar el proyecto desde la terminal en la raíz del proyecto:
+        └── MainReto.java             # Ejecución principal y respuesta al reto
+4. Compilación y Ejecución
+Comandos para ejecutar desde la consola:
 # 1. Compilar los archivos Java
 javac -encoding UTF-8 -d out src/arboles/modelo/*.java src/arboles/negocio/*.java src/arboles/vista/*.java src/reto/MainReto.java
 
 # 2. Ejecutar la aplicación principal
 java -cp out reto.MainReto
-
-
-📊 Respuestas al Reto
-¿Cuál árbol se parece a una lista?
-El Árbol B se comporta exactamente como una lista enlazada, ya que todos sus nodos tienen únicamente un hijo a la derecha.
-¿Qué pasaría al buscar un dato en él?
-Al degradarse a una lista enlazada (cadena), la eficiencia de búsqueda se reduce de una complejidad logarítmica  (propia de un árbol equilibrado) a una complejidad lineal .
-Recorrido Extra ( en el Árbol A):
-Partiendo de LTX, al ir a la izquierda se llega a ATF, luego a la derecha a IBB. Como IBB es una hoja y no posee hijo izquierdo, el recorrido se detiene en ese punto.
+5. Respuestas al Reto
+• ¿Cuál árbol se parece a una lista?
+El Árbol B se comporta exactamente como una lista enlazada, ya que todos sus nodos poseen únicamente un hijo a la derecha (degenere).
+• ¿Qué pasaría al buscar un dato en él?
+Al degradarse a una lista enlazada (cadena), la eficiencia de búsqueda se reduce de una complejidad logarítmica O(log n) (propia de un árbol equilibrado) a una complejidad lineal O(n).
+• Recorrido Extra (I ➔ D ➔ I en el Árbol A):
+Partiendo de LTX, al ir a la izquierda se llega a ATF, luego a la derecha a IBB. Como IBB es un nodo hoja y no posee hijo izquierdo, el recorrido se detiene en ese punto.
